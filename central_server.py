@@ -24,7 +24,7 @@ def main():
     ns = Pyro5.api.locate_ns()
     ns.register("central.server", uri)
 
-    print("Central Server is ready.")
+    print("Servidor Central está pronto.")
     daemon.requestLoop()
 
 if __name__ == "__main__":
