@@ -41,7 +41,7 @@ def main():
     video_dir = "./videos"
     http_port = 8000
 
-    media_server = MediaServer(server_name, http_port,  video_dir,)
+    media_server = MediaServer(server_name, http_port, video_dir)
     
     # Start HTTP server in a new thread
     threading.Thread(target=run_http_server, args=("./videos", http_port), daemon=True).start()
