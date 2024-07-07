@@ -44,7 +44,7 @@ def main():
     media_server = MediaServer(server_name, http_port, video_dir)
     
     # Start HTTP server in a new thread
-    threading.Thread(target=run_http_server, args=("./videos", http_port), daemon=True).start()
+    threading.Thread(target=run_http_server, args=(video_dir, http_port), daemon=True).start()
 
     # Pyro server setup
     daemon = Pyro5.server.Daemon()
